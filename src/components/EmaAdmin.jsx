@@ -270,7 +270,7 @@ export const EmaAdmin = () => {
         </div>
 
         {/* 統計情報 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-2xl font-bold text-gray-800">{stats.total}</div>
             <div className="text-gray-600">総絵馬数</div>
@@ -278,10 +278,6 @@ export const EmaAdmin = () => {
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-2xl font-bold text-red-600">{stats.totalLikes}</div>
             <div className="text-gray-600">総いいね数</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-2xl font-bold text-blue-600">{stats.withCharacter}</div>
-            <div className="text-gray-600">キャラクター選択済み</div>
           </div>
         </div>
 
