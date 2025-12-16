@@ -318,30 +318,20 @@ export const EmaAdmin = () => {
         </div>
 
         {/* 複数選択・一括操作 */}
-        {filteredAndSortedEmas.length > 0 && (
+        {selectedIds.size > 0 && (
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-4">
-                <button
-                  onClick={handleSelectAll}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
-                >
-                  {selectedIds.size === filteredAndSortedEmas.length ? '全解除' : '全選択'}
-                </button>
-                {selectedIds.size > 0 && (
-                  <span className="text-gray-700 font-medium">
-                    {selectedIds.size}件選択中
-                  </span>
-                )}
+                <span className="text-gray-700 font-medium">
+                  {selectedIds.size}件選択中
+                </span>
               </div>
-              {selectedIds.size > 0 && (
-                <button
-                  onClick={handleBulkDelete}
-                  className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
-                >
-                  選択した{selectedIds.size}件を削除
-                </button>
-              )}
+              <button
+                onClick={handleBulkDelete}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
+              >
+                選択した{selectedIds.size}件を削除
+              </button>
             </div>
           </div>
         )}
@@ -426,11 +416,11 @@ export const EmaAdmin = () => {
                             ID: {ema.id} |
                             作成日: {ema.created_at ? ema.created_at.toLocaleString('ja-JP') : '不明'}
                           </div>
-                          <div className="text-lg font-semibold text-gray-800 mb-2">
-                            {ema.name || '（名前なし）'}
-                          </div>
-                          <div className="text-gray-700 whitespace-pre-wrap">
+                          <div className="text-lg font-semibold text-gray-800 mb-2 whitespace-pre-wrap">
                             {ema.wish || '（願い事なし）'}
+                          </div>
+                          <div className="text-sm text-gray-600">
+                            {ema.name || '（名前なし）'}
                           </div>
                           {ema.character && (
                             <div className="mt-2 text-sm text-blue-600">
