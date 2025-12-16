@@ -353,7 +353,7 @@ export const EmaAdmin = () => {
                       <textarea
                         value={editForm.wish}
                         onChange={(e) => setEditForm({ ...editForm, wish: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-900 bg-white"
                         rows="3"
                       />
                     </div>
@@ -366,7 +366,7 @@ export const EmaAdmin = () => {
                           type="text"
                           value={editForm.name}
                           onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-900 bg-white"
                         />
                       </div>
                       <div>
@@ -377,7 +377,7 @@ export const EmaAdmin = () => {
                           type="number"
                           value={editForm.likes}
                           onChange={(e) => setEditForm({ ...editForm, likes: e.target.value })}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-900 bg-white"
                         />
                       </div>
                     </div>
